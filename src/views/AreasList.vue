@@ -26,6 +26,19 @@ const { data: prototypes } = useSanityFetcher(
 
 let currentSelectedElement = ref('all')
 
+const filteredAreasByArrays = computed(() => {
+    const allAreas = areas.value
+    const allPrototypes = prototypes.value
+    let filteredPrototypeByAreas = []
+
+    const areaObject = {}
+
+    areaObject.title = 'Hello'
+
+
+    return filteredPrototypeByAreas
+})
+
 
 </script>
 
@@ -54,7 +67,7 @@ let currentSelectedElement = ref('all')
             </aside>
 
         </div>
-        <section class="areaBox" v-for="(singleArea, areaIdx) in areas" :key="areaIdx">
+        <section class="areaBox" v-for="(singleArea, areaIdx) in areas" :key="areaIdx"  >
             <template v-if="currentSelectedElement == 'all' || singleArea.title == currentSelectedElement">
                 <h2 class="Main-Subtitle">{{singleArea.title}}</h2>
                 <div class="itemList" v-for="(singleProt, protIdx) in prototypes" :key="protIdx">
@@ -79,6 +92,7 @@ let currentSelectedElement = ref('all')
   top: 150px;
   width: 75%;
   margin: 0 auto;
+  padding-bottom: 20vh;
 }
 
 .Main-title {

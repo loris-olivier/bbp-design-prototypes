@@ -27,6 +27,7 @@ import Cartouche from '../components/Cartouche.vue'
       :areaOfInterest="singleProt.areaOfInterest"
       :creationDate="singleProt.creationDate"
       :updateDate="singleProt.updateDate"
+      :address="singleProt.address"
       />
   </main>
 </template>
@@ -37,6 +38,7 @@ import Cartouche from '../components/Cartouche.vue'
   top: 150px;
   max-width: 75%;
   margin: 0 auto;
+  padding-bottom: 20vh;
 }
 
 </style>

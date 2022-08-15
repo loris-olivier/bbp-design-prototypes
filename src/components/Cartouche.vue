@@ -15,12 +15,15 @@ const props = defineProps({
     },
     updateDate: {
         type: String
+    },
+    address: {
+        type: String
     }
 })
 </script>
 
 <template>
-    <section class="singlePrototypeBox">
+    <a class="singlePrototypeBox" :href="address">
     <!-- L E F T  -->
         <div class="left-side-container">
             <header class="head-proto-infos">
@@ -40,7 +43,7 @@ const props = defineProps({
             <LabelInfoBoxVue :label="`Created`" :coreInfo="creationDate" />
             <LabelInfoBoxVue :label="`Updated`" :coreInfo="updateDate" class="lelftMarginSpace-M" />
         </div>
-    </section>
+    </a>
 </template>
 
 <style lang="scss" scoped>
@@ -64,7 +67,8 @@ const props = defineProps({
   transition: all ease-in-out 0.3s;
 
   &:hover {
-    background: #E6F7FF;
+    background: #F5F5F5;
+    box-shadow: 0 24px 42px -16px rgba(0, 0, 0, 0);
   }
 }
 
