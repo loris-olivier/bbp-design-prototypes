@@ -152,6 +152,12 @@ const filteredAreasByArrays = computed(() => {
     color: #0050B3;
 }
 
+ul {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
 li {
     list-style: none;
 }

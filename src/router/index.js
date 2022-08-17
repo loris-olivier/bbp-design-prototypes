@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AreasList from "../views/AreasList.vue";
 import DesignGuide from "../views/DesignGuide.vue";
+import Tickets from "../views/Tickets.vue"
+import Ticket from "../views/tickets/Ticket.vue"
 
 const routes = [
   {
@@ -18,6 +20,17 @@ const routes = [
     path: "/design",
     name: "Design",
     component: DesignGuide
+  },
+  {
+    path: "/tickets",
+    name: "Tickets",
+    component: Tickets
+  },
+  {
+    path: "/tickets/:slug",
+    name: "Ticket",
+    component: Ticket,
+    props: true
   }
 ];
 

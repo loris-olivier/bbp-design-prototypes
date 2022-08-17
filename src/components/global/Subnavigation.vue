@@ -13,6 +13,10 @@
             <span class="label-button">Areas</span>
             <img src="@/assets/icons/icn_chevron.svg" alt="chevron icon" />
         </router-link>
+        <router-link to="/tickets" class="singleItem">
+            <span class="label-button">Tickets</span>
+            <img src="@/assets/icons/icn_chevron.svg" alt="chevron icon" />
+        </router-link>
         <router-link to="/design" class="singleItem">
             <span class="label-button">Design Guide</span>
             <img src="@/assets/icons/icn_chevron.svg" alt="chevron icon" />
@@ -40,7 +44,7 @@ a {
 }
 
 .singleItem {
-    flex-basis: calc(100% / 3);
+    flex-basis: 25%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -62,8 +66,11 @@ a {
     &:nth-child(2){
         background: #0050B3;
     }
-    &:last-child{
+    &:nth-child(3){
         background: #096DD9;
+    }
+    &:last-child{
+        background: #1890FF;
     }
 
     &:hover {
